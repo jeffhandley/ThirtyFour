@@ -48,6 +48,8 @@
     <Compile Include="NumericRanges.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NumericRangeTests.cs" />
+    <Compile Include="RepeatedString.cs" />
+    <Compile Include="RepeatedStringTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

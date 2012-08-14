@@ -45,6 +45,8 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Anagram.cs" />
+    <Compile Include="AnagramTests.cs" />
     <Compile Include="NumericRanges.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NumericRangeTests.cs" />

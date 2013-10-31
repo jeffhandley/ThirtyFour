@@ -22,42 +22,10 @@ namespace ThirtyFour
                 return false;
             }
 
-            var charCounts = new Dictionary<string, int>(StringComparer.InvariantCultureIgnoreCase);
+            var sorted1 = word1.ToLowerInvariant().OrderBy(c => c);
+            var sorted2 = word2.ToLowerInvariant().OrderBy(c => c);
 
-            for (int x = 0; x < word1.Length; ++x)
-            {
-                string char1 = word1[x].ToString();
-                string char2 = word2[x].ToString();
-
-                if (char1 != char2)
-                {
-                    if (charCounts.ContainsKey(char1))
-                    {
-                        if (++charCounts[char1] == 0)
-                        {
-                            charCounts.Remove(char1);
-                        }
-                    }
-                    else
-                    {
-                        charCounts.Add(char1, 1);
-                    }
-
-                    if (charCounts.ContainsKey(char2))
-                    {
-                        if (--charCounts[char2] == 0)
-                        {
-                            charCounts.Remove(char2);
-                        }
-                    }
-                    else
-                    {
-                        charCounts.Add(char2, -1);
-                    }
-                }
-            }
-
-            return charCounts.Count == 0;
+            return sorted1.SequenceEqual(sorted2);
         }
 
         private static string Sanitize(string word)

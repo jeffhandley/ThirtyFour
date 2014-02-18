@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ThirtyFour
 {
-    public static class ClosedParens
+    public static class ParenMatching
     {
         public static bool HasMismatchedParens(this string statement)
         {

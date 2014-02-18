@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace ThirtyFour
 {
     [TestClass]
-    public class ClosedParensTests
+    public class ParenMatchingTests
     {
         [TestMethod]
         public void NoParensHasNoUnclosedParens()
